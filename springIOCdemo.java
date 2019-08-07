@@ -9,7 +9,7 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
-//��дIOC�ײ�
+//手写IOC  利用反射原理
 public class springIOCdemo {
 public static void main(String[] args)throws  Exception{
 	ApplicationResouceReader arr=new ApplicationResouceReader("usertest.xml");
@@ -28,7 +28,7 @@ class ApplicationResouceReader{
 		SAXReader reader = new SAXReader();
 		Document doc = reader.read(inputStream);
 		
-		//解析XML获取到bean Id的节�?
+		//解析XML获取到bean Id的节�?
 		Element beans = doc.getRootElement();
 		List<Element> beanList = beans.elements();
 		Element ele;
@@ -41,13 +41,13 @@ class ApplicationResouceReader{
 			Class<?> forName = Class.forName(beanClass);
 			List<Element> attrslist = ele.elements();
 			Object userInstance = forName.newInstance();
-			//对属性进行赋�?
+			//对属性进行赋值?
 			for (int j = 0; j < attrslist.size(); j++) {
 				String key_zhi = attrslist.get(j).attributeValue("key");
 				//获取到KEY里面的name和sex
 				Field field = forName.getDeclaredField(key_zhi);
 				String value_zhi=attrslist.get(j).attributeValue("value");
-				field.setAccessible(true);//设置成可以为私有属�?�赋�?
+				field.setAccessible(true);//设置成可以为私有属性赋值?
 				field.set(userInstance,value_zhi );			
 			}
 			return userInstance;

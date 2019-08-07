@@ -3,8 +3,8 @@ package com.test.entity;
 public class ThreadTicke01 {
 	public static void main(String[] args) {
 		ticketThread saleticket = new ticketThread();
-		Thread t1 = new Thread(saleticket, "Ïß³Ì1");
-		Thread t2 = new Thread(saleticket, "Ïß³Ì2");
+		Thread t1 = new Thread(saleticket, "çº¿ç¨‹1");
+		Thread t2 = new Thread(saleticket, "çº¿ç¨‹2");
 		t1.start();
 		try {
 			Thread.sleep(900);
@@ -35,7 +35,7 @@ class ticketThread implements Runnable {
 //		synchronized (this) {
 			if(ticketCount>0){
 				
-				System.out.println(Thread.currentThread().getName() + "Âô³öÁË" + (100 - ticketCount + 1) + "Æ±");
+				System.out.println(Thread.currentThread().getName() + "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + (100 - ticketCount + 1) + "Æ±");
 				ticketCount--;
 //			}
 			
