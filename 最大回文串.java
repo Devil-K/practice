@@ -40,7 +40,7 @@ public class 最大回文串 {
 	
 public static void main(String[] args) {
 	test1("google");
-	
+	/*
 	Scanner scanner = new Scanner(System.in);	
 	while(scanner.hasNext()){
 		String next = scanner.next();
@@ -75,6 +75,6 @@ public static void main(String[] args) {
 		System.out.println(count1);
 	}
 		
-	}
+	}*/
 }
 }
