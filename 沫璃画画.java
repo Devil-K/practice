@@ -7,9 +7,10 @@ public class 沫璃画画 {
 		Scanner scanner = new Scanner(System.in);
 		// String line = scanner.nextLine();
 		int group = scanner.nextInt();
-		int row = scanner.nextInt();
+		
 		int sum = 0;
 		for (int i = 0; i < group; i++) {
+			int row = scanner.nextInt();
 			for (int j = 0; j < row; j++) {
 				int x1 = scanner.nextInt();
 				int y1 = scanner.nextInt();
