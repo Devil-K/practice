@@ -35,7 +35,7 @@ class ticketThread implements Runnable {
 //		synchronized (this) {
 			if(ticketCount>0){
 				
-				System.out.println(Thread.currentThread().getName() + "������" + (100 - ticketCount + 1) + "Ʊ");
+				System.out.println(Thread.currentThread().getName() + "这是啥" + (100 - ticketCount + 1) + "Ʊ");
 				ticketCount--;
 //			}
 			

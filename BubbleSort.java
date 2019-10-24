@@ -9,17 +9,17 @@ public class BubbleSort {
 	}
 
 	static void sort1(int[] arr) {
-		for (int j = 0; j < arr.length; j++) {
+		for (int j = arr.length; j > 0; j--) {
 			for (int i = 1; i < arr.length; i++) {
-				while (i < arr.length) {
+				//while (i < arr.length) {
 					if (arr[i - 1] > arr[i]) {
 						int sing = arr[i - 1];
 						arr[i - 1] = arr[i];
 						arr[i] = sing;
-						i -= 1;
+						//i -= 1;
 					}
-					i++;
-				}
+					//i++;
+				//}
 				
 			}
 		}
